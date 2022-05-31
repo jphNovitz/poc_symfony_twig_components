@@ -21,8 +21,11 @@ class Product
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $comment;
 
-    #[ORM\ManyToMany(targetEntity: "Ingredient", mappedBy: "product")]
+    #[ORM\ManyToMany(targetEntity: "Ingredient", mappedBy: "products")]
     private $ingredients;
+
+    #[ORM\OneToOne(targetEntity: "User")]
+    private $user;
 
     public function __construct(){
         $this->ingredients = new ArrayCollection();
@@ -80,6 +83,18 @@ class Product
         if ($this->ingredients->removeElement($ingredient)) {
             $ingredient->removeProduct($this);
         }
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }

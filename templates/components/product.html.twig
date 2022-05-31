@@ -1,0 +1,14 @@
+<div class="border hover:shadow-md rounded-xl p-4">
+    {# {{ dump(this.product) }} #}
+    <h2 class="font-bold text-lg bg-gradient-to-r from-green-100 to-white text-green-900 ">{{ product.name }} </h2>
+    <p class="text-base">
+        {{ product.comment is not null ? product.comment : '~~' }}
+    </p>
+    <div class="text-sm italic">
+           <span class="font-bold">Indrédients:</span>{% for ingredient in product.ingredients %}
+            {{ ingredient.name }},
+        {% endfor %}
+    </div>
+
+    {{ product.user.username }}
+</div>
