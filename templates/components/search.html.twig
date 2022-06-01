@@ -1,0 +1,12 @@
+<div {{ attributes }}>
+    <input type="search"
+           value="{{ query }}"
+           name="query"
+           data-action="live#update"
+           class="border">
+
+    {{ component('products-list', {
+        products: this.products
+    }) }}
+
+</div>

@@ -5,8 +5,8 @@ namespace App\Components;
 use Doctrine\Common\Collections\Collection;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 
-#[AsTwigComponent('product')]
-class ProductComponent
+#[AsTwigComponent('product-card')]
+class ProductCardComponent
 {
 
     public Object $product;

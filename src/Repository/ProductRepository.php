@@ -39,6 +39,21 @@ class ProductRepository extends ServiceEntityRepository
         }
     }
 
+    public function findByQuery(string $query)
+    {
+        if (empty($query)) return [];
+
+        return $this->createQueryBuilder('p')
+            ->leftJoin('p.ingredients', 'i')
+            ->leftjoin('p.user', 'u')
+            ->addSelect('p')
+            ->addSelect('i, u')
+            ->andWhere('i.name like :query')
+            ->setParameter('query', '%' . $query . '%')
+            ->orderBy('p.id', 'ASC')
+            ->getQuery()
+            ->getResult();
+    }
 //    /**
 //     * @return Product[] Returns an array of Product objects
 //     */
