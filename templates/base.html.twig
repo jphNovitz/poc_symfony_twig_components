@@ -17,6 +17,10 @@
     <body class="bg-white p-12">
         <div class="max-w-screen-xl border border-gray-300 shadow-lg m-auto p-6 ">
             <H1 class="text-xl font-black">Demo ux Twig components / Live components </H1>
+            <ul class="w-full py-6 my-4 flex ">
+                <li> <a href="{{ path('products_list') }}" class="p-2  bg-gray-100 border-gray-600 rounded-lg active:shadow-lg">Accueil</a> </li>
+                <li> <a href="{{ path('products_search') }}" class="p-2 my-2  bg-gray-100 border-gray-600 rounded-lg active:shadow-lg">Recherche</a> </li>
+            </ul>
         {% block body %}{% endblock %}
         </div>
     </body>

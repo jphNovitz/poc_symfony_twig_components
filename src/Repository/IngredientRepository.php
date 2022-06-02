@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Ingredient;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Query;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -38,6 +39,20 @@ class IngredientRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
+
+    public function search(string $query = "")
+    {
+        if (empty($query)) return [];
+
+        return $this->createQueryBuilder('i')
+            ->addSelect('partial i.{id}')
+            ->andWhere('i.  name like :query')
+            ->setParameter('query', '%' . $query . '%')
+            ->getQuery()
+            ->getResult();
+//            ->getResult(Query::HINT_FORCE_PARTIAL_LOAD, 1);
+    }
+
 
 //    /**
 //     * @return Ingredient[] Returns an array of Ingredient objects

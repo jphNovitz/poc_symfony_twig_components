@@ -2,7 +2,11 @@
 
 
 {% block body %}
-
-    {{ component('search') }}
-
+    <div class="w-full flex overflow-hidden">
+    <div class="w-9/12">
+        {{ component('search') }}
+    </div>
+    <div class="w-3/12">
+        {{ component('ingredients-lateral-component') }}
+    </div>
 {% endblock %}
