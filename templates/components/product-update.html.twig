@@ -1,0 +1,33 @@
+<div {{ attributes }} class="flex flex-col">
+    {% if  isSaved %}
+    <span class="p-2 m-3 rounded-md bg-green-200 text-green-900">Sauvegardé </span>
+    {% endif %}
+    <label for="product.name">Nom:</label>
+    <input type="text"
+           id="product.name"
+           value="{{ product.name }}"
+           data-model="product.name"
+           data-action="blur->live#update"
+           class="focus:outline-none border-b-2 focus:border-b-black">
+
+    <label for="product.name" class="mt-6">Description:</label>
+    <input type="text"
+           id="product.comment"
+           value="{{ product.comment }}"
+           data-model="product.comment"
+           data-action="blur->live#update"
+           class="focus:outline-none border-b-2 focus:border-b-black">
+
+    <button
+            data-action="live#action"
+            data-action-name="save"
+            class="w-max my-6 p-2 bg-gray-800 text-gray-50 rounded-md"
+    >
+        Enregistrer
+    </button>
+
+
+    {{ component('product-card', {product: product}) }}
+
+
+</div>

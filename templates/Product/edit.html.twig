@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="w-full flex overflow-hidden">
+        {{ component('product-update', {product: product})}}
+    </div>
+{% endblock %}
+
+{#
+
+<div class="w-9/12">
+    #}
+{#        {{ component('search') }}#}{#
+
+</div>
+<div class="w-3/12">
+    {{ component('update-ingredient-component') }}
+</div>#}

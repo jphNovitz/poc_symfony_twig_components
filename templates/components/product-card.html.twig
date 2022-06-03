@@ -1,6 +1,8 @@
 <div class="border hover:shadow-md rounded-xl p-4">
 
-    <h2 class="font-bold text-lg bg-gradient-to-r from-green-100 to-white text-green-900 ">{{ product.name }} </h2>
+    <h2 class="font-bold text-lg bg-gradient-to-r from-green-100 to-white text-green-900 underline">
+        <a href="{{ path('product_update', {'id': product.id}) }}"> {{ product.name }} </a>
+    </h2>
     <p class="text-base">
         {{ product.comment is not null ? product.comment : '~~' }}
     </p>

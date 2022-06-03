@@ -1,0 +1,16 @@
+<div {{ attributes }}>
+
+    <input type="text"
+     value="{{ name }}"
+           name="name"
+           data-action="blur->live#update"
+    >
+    <input type="submit" class="border" data-action="submit->Live#$Add">
+    <ul>
+        {% for ingredient in this.ingredients %}
+            <li>
+                {{ ingredient.name }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
