@@ -4,7 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Ingredient;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\Query;
+use Doctrine\ORM\Query as Query;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -50,7 +50,6 @@ class IngredientRepository extends ServiceEntityRepository
             ->setParameter('query', '%' . $query . '%')
             ->getQuery()
             ->getResult();
-//            ->getResult(Query::HINT_FORCE_PARTIAL_LOAD, 1);
     }
 
 

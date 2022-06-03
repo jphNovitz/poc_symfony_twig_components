@@ -10,14 +10,16 @@ use Symfony\UX\LiveComponent\Attribute\LiveAction;
 use Symfony\UX\LiveComponent\Attribute\LiveProp;
 use Symfony\UX\LiveComponent\DefaultActionTrait;
 use Symfony\UX\LiveComponent\ValidatableComponentTrait;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[asLiveComponent('product-update')]
 class ProductUpdateComponent
 {
     use DefaultActionTrait;
-//    use ValidatableComponentTrait;
+    use ValidatableComponentTrait;
 
-    #[LiveProp(exposed: ['name', 'comment', 'ingredients'])]
+    #[LiveProp(exposed: ['name', 'comment'])]
+    #[Assert\Valid]
     public Product $product;
 
     public bool $isSaved = false;
@@ -25,7 +27,7 @@ class ProductUpdateComponent
     #[LiveAction]
     public function save(EntityManagerInterface $entityManager)
     {
-//        $this->validate();
+        $this->validate();
 
         $this->isSaved = true;
         $entityManager->flush();
