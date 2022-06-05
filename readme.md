@@ -69,6 +69,6 @@ Live components are useful too but you must take care of the optimization becaus
 
 ### sources
 * [Yoan Dev Video](https://www.youtube.com/watch?v=dYVpEyH3kRw)
-* [Yoan Dev reo](https://github.com/yoanbernabeu/D-couverte-des-Twig-et-Live-Components-Symfony-UX-) laissez lui une étoile
+* [Yoan Dev repo](https://github.com/yoanbernabeu/D-couverte-des-Twig-et-Live-Components-Symfony-UX-) laissez lui une étoile
 * [Twig Components](https://symfony.com/bundles/ux-twig-component/current/index.html)
 * [Twig Live Components](https://symfony.com/bundles/ux-live-component/current/index.html#installation)
