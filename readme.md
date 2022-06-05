@@ -20,10 +20,10 @@ Les Live component sont très utilises pour de la réactivité mais attention à
 
 -----------------------------------------------------------------------------------------------------------------------
 
-![screenshot_twig_components (1).png](screenshot_twig_components (1).png)
-![screenshot_twig_components (2).png](screenshot_twig_components (2).png)
-![screenshot_twig_components (3).png](screenshot_twig_components (3).png)
-![screenshot_twig_components (4).png](screenshot_twig_components (4).png)
+![screenshot_twig_components_01.png](screenshot_twig_components_01.png)
+![screenshot_twig_components_02.png](screenshot_twig_components_02.png)
+![screenshot_twig_components_03.png](screenshot_twig_components_03.png)
+![screenshot_twig_components_04.png](screenshot_twig_components_04.png)
 
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -67,3 +67,8 @@ Live components are useful too but you must take care of the optimization becaus
 * npm tun watch
 
 
+### sources
+* [Yoan Dev Video](https://www.youtube.com/watch?v=dYVpEyH3kRw)
+* [Yoan Dev reo](https://github.com/yoanbernabeu/D-couverte-des-Twig-et-Live-Components-Symfony-UX-) laissez lui une étoile
+* [Twig Components](https://symfony.com/bundles/ux-twig-component/current/index.html)
+* [Twig Live Components](https://symfony.com/bundles/ux-live-component/current/index.html#installation)
